@@ -34,6 +34,37 @@ exec "$modules"/barrt/runner.sh
 
 ## API
 
+`define_curl_token $extra_header_name_and_value_for_this_scenario`
+
+`keep_headers $regex`
+
+`inspect_next_curl`
+
+`record_curl $curl_arguments`
+
+`stash_curl`
+
+`pop_curl`
+
+`get_response`
+
+`get_http_status`
+
+`get_header`
+
+`get_response_body`
+
+`get_cache_max_age`
+
+`until_fresh_curl_object $command_to_run`
+
+`replace_in_response $sed_expression`
+
+`expect_http_status`
+
+`expect_header $header_name`
+
+`expect_response_body`
 
 ## License
 

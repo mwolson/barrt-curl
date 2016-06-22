@@ -1,0 +1,25 @@
+{
+  "name": "barrt-curl",
+  "version": "0.0.1",
+  "description": "cURL support for BARRT (A Bash Rspec-like Regression Test Framework)",
+  "main": "setup.sh",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mwolson/barrt-curl.git"
+  },
+  "author": "Michael Olson <mwolson@member.fsf.org>",
+  "license": "MIT",
+  "keywords": [
+    "bash",
+    "curl",
+    "shell",
+    "test",
+    "rspec"
+  ],
+  "dependencies": {},
+  "peerDependencies": {
+    "barrt": "*"
+  },
+  "devDependencies": {}
+}
