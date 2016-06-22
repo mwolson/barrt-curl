@@ -1,6 +1,6 @@
 {
   "name": "barrt-curl",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "cURL support for BARRT (A Bash Rspec-like Regression Test Framework)",
   "main": "setup.sh",
   "scripts": {},
