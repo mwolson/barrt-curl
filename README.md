@@ -42,7 +42,7 @@ The following are provided as bash functions:
 
 `until_fresh_curl_object $command_to_run`
 
-### Assertions on the response
+### Expectations
 
 `expect_http_status`
 
