@@ -34,17 +34,23 @@ exec "$modules"/barrt/runner.sh
 
 ## API
 
-`define_curl_token $extra_header_name_and_value_for_this_scenario`
+The following are provided as bash functions:
 
-`keep_headers $regex`
-
-`inspect_next_curl`
+### Performing a cURL request
 
 `record_curl $curl_arguments`
 
-`stash_curl`
+`until_fresh_curl_object $command_to_run`
 
-`pop_curl`
+### Assertions on the response
+
+`expect_http_status`
+
+`expect_header $header_name`
+
+`expect_response_body`
+
+### Accessing parts of the response
 
 `get_response`
 
@@ -56,15 +62,19 @@ exec "$modules"/barrt/runner.sh
 
 `get_cache_max_age`
 
-`until_fresh_curl_object $command_to_run`
+### Utility
+
+`inspect_next_curl`
+
+`keep_headers $regex`
+
+`define_curl_token $extra_header_name_and_value_for_this_scenario`
+
+`stash_curl`
+
+`pop_curl`
 
 `replace_in_response $sed_expression`
-
-`expect_http_status`
-
-`expect_header $header_name`
-
-`expect_response_body`
 
 ## License
 
