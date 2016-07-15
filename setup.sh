@@ -32,10 +32,14 @@ function record_curl() {
     local status=$?
     if test -n "$_inspect_next_curl"; then
         _inspect_next_curl=
-        addl_text=$(curl -# -vv $curl_args "$@" 2> >(grep '^[*<>]'))
-        soft_fail "Inspecting curl command invoked like:$(echo_quoted curl -# -vv $curl_args "$@")"
+        addl_text=$full
+        if test -n "$curl_token"; then
+            soft_fail "Inspecting curl command invoked like:$(echo_quoted curl -# -vv $curl_args -H "$curl_token" "$@")"
+        else
+            soft_fail "Inspecting curl command invoked like:$(echo_quoted curl -# -vv $curl_args "$@")"
+        fi
     elif test $status -ne 0; then
-        addl_text=$(curl -# -vv $curl_args "$@" 2>&1)
+        addl_text=$full
         fail "curl command failed with status code $status"
     fi
 }
