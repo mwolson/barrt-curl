@@ -56,11 +56,15 @@ The following are provided as bash functions:
 
 `get_http_status`
 
+`get_headers`
+
 `get_header`
 
 `get_response_body`
 
 `get_cache_max_age`
+
+`use_nth_response`
 
 ### Utility
 
